@@ -18,6 +18,10 @@
             <!-- Pizza Name -->
             <div class="md-form mt-4">
                 <input type="text" id="materialRegisterFormEmail" class="form-control">
+                <label for="materialRegisterFormEmail">Customer's Name</label>
+            </div>
+            <div class="md-form mt-4">
+                <input type="text" id="materialRegisterFormEmail" class="form-control">
                 <label for="materialRegisterFormEmail">Pizza Name</label>
             </div>
             <div class="md-form mt-4">
@@ -36,10 +40,8 @@
 
             
             <!-- Sign up button -->
-            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Order</button>
 
-            <!-- Social register -->
-            <p>or sign up with:</p>
 
             <a type="button" class="btn-floating btn-fb btn-sm">
                 <i class="fab fa-facebook-f"></i>
