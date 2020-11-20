@@ -18,7 +18,7 @@
 <header>
 <!--Main Navigation-->
 
-  <nav class="navbar navbar-expand-lg navbar-dark indigo scrolling-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark green scrolling-navbar">
     <a class="navbar-brand" href="#"><strong>Pizza's Kitchen</strong></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

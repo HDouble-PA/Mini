@@ -83,7 +83,7 @@
 
       </div>
       <div class="modal-footer d-flex justify-content-center">
-        <button class="btn indigo white-text">Order Updated</button>
+        <button class="btn yellow black-text w-100">Order Updated</button>
       </div>
     </div>
   </div>
