@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PizzaController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,4 +15,5 @@ use App\Http\Controllers\PizzaController;
 |
 */
 Route::get('/',[PizzaController::class,"index"])->name("home");
+Route::post('/',[PizzaController::class,"insert"])->name("insert");
 Route::get('/pizzas',[PizzaController::class,"pizzas"] )->name("order");
