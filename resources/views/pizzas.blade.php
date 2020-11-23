@@ -1,6 +1,7 @@
 @extends("layout.layout")
 @section("content")
     <div class="container">
+    
         <table class="table table-hover mt-4">
             <thead>
                 <tr>
@@ -15,36 +16,19 @@
                 </tr>
             </thead>
             <tbody>
+              @foreach($pizzas as $pizza)
                 <tr>
-                <th scope="row">1</th>
-                <td>user</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>$3.99</td>
+                <th scope="row">{{$pizza['id']}}</th>
+                <td>{{$pizza['username']}}</td>
+                <td>{{$pizza['pizza_name']}}</td>
+                <td>{{$pizza['toppings']}}</td>
+                <td>{{$pizza['sauce']}}</td>
+                <td>{{$pizza['price']}}</td>
                 <td><button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#modalLoginForm">Edit Order</button></td>
                 <td><button class="btn btn-sm btn-success">Confirmed</button></td>
                 </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>user</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>$3.99</td>
-                <td><button class="btn btn-sm btn-warning" data-toggle="modal" data-target="#modalLoginForm">Edit Order</button></td>
-                <td><button class="btn btn-sm btn-success">Confirmed</button></td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td>user</td>
-                <td>Larry the Bird</td>
-                <td>Thornton</td>
-                <td>@twitter</td>
-                <td>$3.99</td>
-                <td><button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#modalLoginForm">Edit Order</button></td>
-                <td><button class="btn btn-sm btn-success">Confirmed</button></td>
-                </tr>
+              @endforeach
+              
             </tbody>
         </table>
     </div>
