@@ -19,7 +19,7 @@ class CreatePizzasTable extends Migration
             $table->string('pizza_name');
             $table->string('toppings');
             $table->string('sauce');
-            $table->integer('price');
+            $table->string('price');
             $table->timestamps();
         });
     }
