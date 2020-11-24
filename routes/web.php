@@ -15,5 +15,12 @@ use App\Http\Controllers\PizzaController;
 |
 */
 Route::get('/',[PizzaController::class,"index"])->name("home");
+
+// create
 Route::post('/',[PizzaController::class,"insert"])->name("insert");
+
+// read
 Route::get('/pizzas',[PizzaController::class,"pizzas"] )->name("order");
+
+// delete
+Route::get('/pizzas/{id}',[PizzaController::class,"delete"])->name("delete");

@@ -50,4 +50,17 @@ class PizzaController extends Controller
            return back()->withErrors($validation);
        }
     }
+
+    // delete data 
+    function delete($id){
+       // return $id;
+    //    find data by id
+    $delete_pizza_data = Pizza::find();
+    // dd($delete_pizza_data);
+
+    // delete this data
+    $delete_pizza_data->delete();
+    return back()->with('delete',"$delete_pizza_data->username's Order is deleted successfully!");
+
+    }
 }

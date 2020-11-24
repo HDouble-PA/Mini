@@ -2,6 +2,12 @@
 @section("content")
     <div class="container">
     
+    @if(Session("delete"))
+            <div class="alert alert-danger mt-3 mb-3">
+                {{ Session("delete") }}
+            </div>
+        @endif
+    
         <table class="table table-hover mt-4">
             <thead>
                 <tr>
@@ -25,7 +31,7 @@
                 <td>{{$pizza['sauce']}}</td>
                 <td>{{$pizza['price']}}</td>
                 <td><button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#modalLoginForm">Edit Order</button></td>
-                <td><button class="btn btn-sm btn-success">Confirmed</button></td>
+                <td><a class="btn btn-sm btn-success" href="{{route("delete",$pizza->id)}}">Order Confirmed</a></td>
                 </tr>
               @endforeach
               
