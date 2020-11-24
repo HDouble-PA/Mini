@@ -18,8 +18,8 @@
             <tbody>
               @foreach($pizzas as $pizza)
                 <tr>
-                <th scope="row">{{$pizza['id']}}</th>
-                <td>{{$pizza['username']}}</td>
+                <th scope="row">{{$pizza->id}}</th>
+                <td>{{$pizza->username}}</td>
                 <td>{{$pizza['pizza_name']}}</td>
                 <td>{{$pizza['toppings']}}</td>
                 <td>{{$pizza['sauce']}}</td>

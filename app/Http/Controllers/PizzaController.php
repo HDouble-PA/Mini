@@ -11,14 +11,18 @@ class PizzaController extends Controller
         return view("index");
     }
     function pizzas() {
-        $pizzas=[
-            ["id"=>1,"username"=>"Kyaw Kyaw","pizza_name"=>"Chicken Pizza","toppings"=>"salad","sauce"=>"tomato","price"=>"9.88$"],
-            ["id"=>2,"username"=>"Hsu Hsu","pizza_name"=>"Chicken Pizza","toppings"=>"Extra Cheese","sauce"=>"tomato","price"=>"8.79$"],
-            ["id"=>3,"username"=>"Nay Nay","pizza_name"=>"Chicken Pizza","toppings"=>"Cheesy","sauce"=>"tomato","price"=>"7.88$"],
-            ["id"=>4,"username"=>"Tun Tun","pizza_name"=>"BBQ Chicken Pizza","toppings"=>"Cheesy","sauce"=>"tomato","price"=>"10$"],
+        // array format
+        // $pizzas=[
+        //     ["id"=>1,"username"=>"Kyaw Kyaw","pizza_name"=>"Chicken Pizza","toppings"=>"salad","sauce"=>"tomato","price"=>"9.88$"],
+        //     ["id"=>2,"username"=>"Hsu Hsu","pizza_name"=>"Chicken Pizza","toppings"=>"Extra Cheese","sauce"=>"tomato","price"=>"8.79$"],
+        //     ["id"=>3,"username"=>"Nay Nay","pizza_name"=>"Chicken Pizza","toppings"=>"Cheesy","sauce"=>"tomato","price"=>"7.88$"],
+        //     ["id"=>4,"username"=>"Tun Tun","pizza_name"=>"BBQ Chicken Pizza","toppings"=>"Cheesy","sauce"=>"tomato","price"=>"10$"],
             
-        ];
+        // ];
         // send data to blade file back
+        // object format
+        $pizzas = Pizza::all();
+        // dd($pizzas);
         return view('pizzas',['pizzas'=>$pizzas]);
     }
     function insert(Request $req){
