@@ -30,7 +30,7 @@
                 <td>{{$pizza['toppings']}}</td>
                 <td>{{$pizza['sauce']}}</td>
                 <td>{{$pizza['price']}}</td>
-                <td><button class="btn btn-sm btn-warning"data-toggle="modal" data-target="#modalLoginForm">Edit Order</button></td>
+                <td><a class="btn btn-sm btn-warning" href="{{route("edit",$pizza->id)}}">Edit Order</a></td>
                 <td><a class="btn btn-sm btn-success" href="{{route("delete",$pizza->id)}}">Order Confirmed</a></td>
                 </tr>
               @endforeach
@@ -38,7 +38,7 @@
             </tbody>
         </table>
     </div>
-    <!-- modal form -->
+    {{-- <!-- modal form -->
     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -75,8 +75,8 @@
       <div class="modal-footer d-flex justify-content-center">
         <button class="btn yellow black-text w-100">Order Updated</button>
       </div>
-    </div>
-  </div>
-</div>
+    </div> --}}
+  {{-- </div>
+</div>  --}}
     
 @endsection

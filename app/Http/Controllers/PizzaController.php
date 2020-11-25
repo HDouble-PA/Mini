@@ -55,12 +55,30 @@ class PizzaController extends Controller
     function delete($id){
        // return $id;
     //    find data by id
-    $delete_pizza_data = Pizza::find();
+    $delete_pizza_data = Pizza::find($id);
     // dd($delete_pizza_data);
 
     // delete this data
     $delete_pizza_data->delete();
     return back()->with('delete',"$delete_pizza_data->username's Order is deleted successfully!");
 
+    }
+    // edit form blade method
+    function edit($id){
+        $pizza =Pizza::find($id);
+        return view("edit",["pizza"=>$pizza]);
+    }
+
+    //update
+    function update($id,Request $req){
+        $pizza=Pizza::find($id);
+        $pizza->username=$req->username;
+        $pizza->pizza_name=$req->pizza_name;
+        $pizza->toppings=$req->toppings;
+        $pizza->sauce=$req->sauce;
+        $pizza->price=$req->price;
+
+        $pizza->update();
+        return redirect()->route('/pizzas');
     }
 }
